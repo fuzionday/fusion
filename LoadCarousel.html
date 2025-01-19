@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text File Carousel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .carousel-container {
+            width: 40%;
+            height: 100px;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            font-size: 20px;
+        }
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .control-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+<script src="https://gist.github.com/fuzionday/61b1d4b289cfab420479474911234924.js"></script>
+</head>
+<body>
+<h1> Hello  #{securityContext.userName} </h1>
+<div class="carousel-container">
+    <div class="carousel" id="carousel">
+        <!-- JSON data items will be injected here -->
+    </div>
+    <div class="controls">
+        <button class="control-button" id="prevBtn">Prev</button>
+        <button class="control-button" id="nextBtn">Next</button>
+    </div>
+</div>
+
+
+</body>
+</html>
